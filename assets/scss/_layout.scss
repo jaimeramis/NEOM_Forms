@@ -1,0 +1,230 @@
+.wrapper {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  margin: 0 auto;
+  // max-width: 1920px;
+  width: 100%;
+  min-height: 100dvh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: var(--negro);
+}
+
+.fondo1 {
+  background-image: url("../images/fondo_01.jpg");
+}
+
+.fondo2 {
+  background-image: url("../images/fondo_02.jpg");
+}
+
+.container {
+  width: 90%;
+  display: grid;
+  grid-template-rows: 1fr auto;
+  // min-height: 100dvh;
+  text-align: center;
+  margin: 0 auto;
+
+  &.thanks {
+    grid-template-rows: auto;
+  }
+}
+
+//HEADER
+.logo {
+  display: block;
+  margin: 0 auto;
+  max-width: toRem(140);
+  padding-top: toRem(50);
+
+  img {
+    width: 100%;
+  }
+}
+
+//END HEADER
+
+//RADIO BUTTONS
+.radio-container {
+  .radio-title {
+    font-size: toRem(24);
+    color: var(--blanco);
+    padding-top: toRem(40);
+    padding-bottom: toRem(30);
+    font-weight: 300;
+  }
+
+  .radio-text {
+    width: 100%;
+    font-size: toRem(24);
+    color: var(--blanco);
+    padding-bottom: toRem(20);
+    text-transform: none;
+    letter-spacing: 0;
+    font-weight: 300;
+    line-height: 1.2;
+
+    p {
+      font-weight: 300;
+    }
+  }
+
+  .radio-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: toRem(80);
+  }
+
+  .radio {
+    display: none;
+    opacity: 0;
+  }
+
+  .radio-label {
+    font-size: toRem(24);
+    line-height: toRem(30);
+    display: inline-block;
+    color: var(--blanco);
+    cursor: pointer;
+    position: relative;
+    padding-left: toRem(42);
+    letter-spacing: 0;
+    font-weight: 300;
+    text-transform: uppercase;
+  }
+
+  .radio-label:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: toRem(30);
+    height: toRem(30);
+    border: 1px solid var(--amarillo);
+    /* Circle border color */
+    border-radius: 50%;
+    /* To make it a circle */
+  }
+
+  .radio:checked + .radio-label:after {
+    content: "";
+    position: absolute;
+    left: toRem(8.5);
+    top: toRem(8.8);
+    width: toRem(14);
+    height: toRem(14);
+    background-color: var(--blanco);
+    border-radius: 50%;
+    /* To make it a circle */
+  }
+}
+
+//END RADIO BUTTONS
+
+//BUTTON
+.form-btn {
+  font-size: toRem(14);
+  text-transform: uppercase;
+  color: var(--negro);
+  background-color: var(--amarillo);
+  width: toRem(120);
+  border-radius: toRem(100);
+  border: none;
+  margin: toRem(40) 0;
+  padding: toRem(22) toRem(30);
+  font-weight: 700;
+  cursor: pointer;
+}
+
+//END BUTTON
+
+//FOOTER
+.footer {
+  padding-bottom: toRem(80);
+}
+
+.footer-logos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: toRem(38);
+
+  .footer-row {
+    display: flex;
+    gap: toRem(38);
+  }
+}
+
+.footer-title {
+  font-size: toRem(18);
+  padding-bottom: toRem(30);
+}
+
+.social-item {
+  width: toRem(38);
+}
+
+//END FOOTER
+//MEDIA QUERYS
+@media only screen and (max-width: $mq3) {
+  .logo {
+    max-width: toRem(100);
+  }
+
+  //RADIO BUTTONS
+  .radio-container {
+    .radio-title {
+      font-size: toRem(18);
+    }
+
+    .radio-text {
+      font-size: toRem(18);
+    }
+
+    .radio-content {
+      gap: toRem(60);
+    }
+  }
+
+  //END RADIO BUTTONS
+  //BUTTON
+  .form-btn {
+    margin-top: toRem(20);
+    margin-bottom: toRem(20);
+  }
+
+  //END BUTTON
+
+  //FOOTER
+  .footer-logos {
+    display: block;
+
+    .footer-row {
+      display: flex;
+      justify-content: center;
+      padding-bottom: toRem(40);
+    }
+  }
+
+  //END FOOTER
+}
+
+@media only screen and (max-width: $mq4) {
+  .radio-container {
+    .radio-text {
+      width: 70%;
+      margin: 0 auto;
+    }
+  }
+}
+
+@media only screen and (max-width: $mq6) {
+  .radio-container {
+    .radio-text {
+      width: 90%;
+    }
+  }
+}

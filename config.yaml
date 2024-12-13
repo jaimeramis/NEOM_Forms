@@ -1,0 +1,9 @@
+baseURL: '/'
+relativeURLs: true
+disableKinds:
+  - taxonomy
+  - RSS
+  - sitemap
+  - home
+  - section
+disableHugoGeneratorInject: true

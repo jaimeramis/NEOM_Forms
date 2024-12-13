@@ -1,0 +1,194 @@
+.invitation {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: toRem(2);
+
+  .title {
+    padding-top: toRem(100);
+    font-size: toRem(55);
+  }
+
+  .subtitle {
+    font-size: toRem(25);
+    padding-top: toRem(40);
+    padding-bottom: toRem(20);
+  }
+
+  .text {
+    width: 90%;
+    max-width: toRem(1120);
+    font-size: toRem(20);
+
+    .line02 {
+      padding-bottom: toRem(40);
+    }
+  }
+
+  //RADIO BUTTONS
+  .radio-container {
+    .radio-title {
+      font-size: toRem(25);
+      padding-bottom: toRem(60);
+      color: var(--amarillo);
+    }
+
+    .radio-content {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: toRem(80);
+    }
+
+    .radio {
+      display: none;
+      opacity: 0;
+    }
+
+    .radio-label {
+      font-size: toRem(24);
+      color: var(--blanco);
+      cursor: pointer;
+      position: relative;
+      padding-left: toRem(42);
+      letter-spacing: 0;
+      font-weight: 300;
+      text-transform: uppercase;
+    }
+
+    .radio-label:before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: toRem(30);
+      height: toRem(30);
+      border: 1px solid var(--amarillo);
+      /* Circle border color */
+      border-radius: 50%;
+      /* To make it a circle */
+    }
+
+    .radio:checked + .radio-label:after {
+      content: "";
+      position: absolute;
+      left: toRem(8.5);
+      top: toRem(8.8);
+      width: toRem(14);
+      height: toRem(14);
+      background-color: var(--blanco);
+      border-radius: 50%;
+      /* To make it a circle */
+    }
+  }
+
+  //END RADIO BUTTONS
+  //BUTTON
+  .form-btn {
+    font-size: toRem(14);
+    text-transform: uppercase;
+    color: var(--negro);
+    background-color: var(--amarillo);
+    width: toRem(100);
+    border-radius: toRem(100);
+    border: none;
+    margin: toRem(60) 0;
+    padding: toRem(22) toRem(30);
+    font-weight: 700;
+    cursor: pointer;
+  }
+
+  //END BUTTON
+}
+
+@media only screen and (max-width: $mq1) {
+  .invitation {
+    .text {
+      width: 90%;
+    }
+  }
+}
+
+@media only screen and (max-width: $mq2) {
+  .invitation {
+    .text {
+      width: 100%;
+      font-size: toRem(20);
+    }
+  }
+}
+
+@media only screen and (max-width: $mq3) {
+  .invitation {
+    .title {
+      font-size: toRem(30);
+      padding-top: toRem(50);
+    }
+
+    .subtitle {
+      font-size: toRem(18);
+      padding-top: toRem(20);
+      padding-bottom: toRem(20);
+    }
+
+    .text {
+      font-size: toRem(18);
+
+      .line01 {
+        display: block;
+        margin: 0 auto;
+        width: 70%;
+        padding-bottom: toRem(20);
+      }
+
+      .line02 {
+        display: block;
+        margin: 0 auto;
+        width: 100%;
+      }
+    }
+
+    //RADIO BUTTONS
+    .radio-container {
+      .radio-title {
+        font-size: toRem(18);
+        padding-bottom: toRem(40);
+      }
+
+      .radio-content {
+        gap: toRem(60);
+      }
+    }
+
+    //END RADIO BUTTONS
+    //BUTTON
+    .form-btn {
+      margin: toRem(40) 0;
+    }
+
+    //END BUTTON
+  }
+}
+
+@media only screen and (max-width: $mq4) {
+  .invitation {
+    .text {
+      .line01 {
+        width: 90%;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: $mq5) {
+  .invitation {
+    .text {
+      .line01 {
+        width: 100%;
+      }
+    }
+  }
+}

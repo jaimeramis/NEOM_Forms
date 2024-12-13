@@ -1,0 +1,15 @@
+{
+  "name": "deploy_as_cloudpages",
+  "version": "1.0.0",
+  "description": "Vite utility for transform html to cloud pages",
+  "type": "module",
+  "scripts": {
+    "build": "hugo --cleanDestinationDir && vite build"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "vite": "^5.3.3"
+  }
+}

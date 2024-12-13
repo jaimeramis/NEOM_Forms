@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="{{ default `en` .Page.Params.lang }}">
+  <head>
+    <meta name="robots" content="noindex" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    {{- if .Page.Params.telscript -}}
+    <script defer src="/js/intlTelInput.js"></script>
+    {{- end -}}
+    <script defer src="/js/main.js"></script>
+    {{- partial "libsass" "scss/fonts.scss" -}} 
+    {{- partial "libsass" "scss/styles.scss" -}}
+    <title>NEOM FORMS</title>
+  </head>
+  <body>
+    <div class="wrapper {{.Page.Params.fondo}}">
+        <!-- HEADER -->
+        <div class="logo">
+          <img src="/images/logo_neom.png" alt="LOGO NEOM" />
+        </div>
+        <!-- HEADER -->
+        <!-- CONTENT -->
+        <section class="container {{.Page.Params.custom}}">
+        {{ block "main" . }} {{ end }}
+        </section>
+        <!-- END CONTENT -->
+      </section>
+    </div>
+  </body>
+</html>

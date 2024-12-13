@@ -1,0 +1,22 @@
+.thankYou {
+  display: flex;
+  justify-content: center;
+  align-self: self-end;
+  letter-spacing: toRem(5);
+  .title {
+    font-size: toRem(55);
+    text-transform: uppercase;
+    padding-bottom: toRem(80);
+  }
+}
+
+//MEDIA QUERYS
+@media only screen and (max-width: $mq3) {
+  .thankYou {
+    .title {
+      font-size: toRem(30);
+      padding-top: 0px;
+      padding-bottom: toRem(40);
+    }
+  }
+}
